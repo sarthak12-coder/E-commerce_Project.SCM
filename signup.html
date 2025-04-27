@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="loginvid.mp4" type="video/mp4">
+    </video>
+    <section>
+        <div class="container">
+            <div class="login-box">
+                <form id="signup-form" onsubmit="return validateForm()">
+                    <img src="/logo.png" style="height: 45px; position: relative; top: -13px; left: -24px;">
+                    <h2>Sign Up</h2>
+                    <div class="input-box">
+                        <input type="text" id="fullname" name="fullname" required>
+                        <label for="fullname">Full Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" name="password" required>
+                        <label for="password">Create Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <label for="confirm-password">Confirm Password</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <p style="color: white;">Already Our Family Member❤️  &emsp; <a href="/login2.html" style="text-decoration: none; color: white;">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateForm() {
+            var fullname = document.getElementById("fullname").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            var namePattern = /^[A-Za-z\s]+$/; // Pattern to only allow alphabetic characters and spaces
+            var nameMaxLength = 50; // Maximum length for full name
+
+            // Validate full name (only alphabetic characters, spaces, and length)
+            if (fullname === "") {
+                alert("Full Name is required.");
+                return false;
+            } else if (!fullname.match(namePattern)) {
+                alert("Full Name can only contain alphabetic characters and spaces.");
+                return false;
+            } else if (fullname.length > nameMaxLength) {
+                alert("Full Name should not exceed " + nameMaxLength + " characters.");
+                return false;
+            }
+
+            // Validate email
+            if (email === "" || !email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Validate password length
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            // Validate password confirmation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // If everything is valid, allow the form submission
+            return true;
+        }
+    </script>
+
+    <script src="signup.js"></script>
+</body>
+</html>
