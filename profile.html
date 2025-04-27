@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mart-Mobiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="profile.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', includedLanguages: 'en,es,fr,de,it,hi,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+                'google_translate_element'
+            );
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element"></div>
+</head>
+<body>
+    <div class="navbar" >
+        <div class="nav-logo border">
+            <a href="front_page.html"><div class="logo"></div>  </a>
+        </div>
+        <div class="border p1">
+        <div class="nav-address ">
+            <p style="font-size: 12px; text-align: center;"> Deliver to</p>
+            <div class="address-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <select name="city" id="city">
+                    <option>Rajpura</option>
+                    <option >Delhi</option>
+                    <option >Kurukshetra</option>
+                    <option>Bhiwani</option>
+                </select>
+            </div>
+        </div>
+    
+        </div>
+        
+        <div class="nav-search border" >
+            <div>
+                <select class="select" onchange="redirectToPage(this)">
+                    <option value="#">All Categories</option>
+                    <option value="shoes.html">Men</option>
+                    <option value="FashionWomen.html">Women</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Search E-MART" style="border:none; height:29px; width: 430px;">
+            </div>
+            <div class="search-icon">
+                <button onclick="myFunction()" class="p2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            // Function to redirect based on dropdown selection
+            function redirectToPage(selectElement) {
+                var selectedValue = selectElement.value;
+                if (selectedValue !== "#") {
+                    // Redirect to the selected page
+                    window.location.href = selectedValue;
+                }
+            }
+        </script>
+        
+        <img src="logistics.png" style="height: 35px; width: 35px; margin-top: 14px; margin-left: 14px;" id="orders">
+        
+        <div class="cart border" style="height: 40px;">
+            
+            <a href="/cart.html" style="text-decoration: none; color: white;"><h3 class="tokri">🛒</h3></a>
+        </div> 
+        <div class="log border" style="padding: 3px;">
+            <a href="signup.html" style="text-decoration: none; color: aliceblue;"><i class="fa-regular fa-user" style="padding-left: 10px;"></i>
+                <h4>User</h4></a>
+        </div>
+        
+    </div>
+    <div class="items-sec ">
+        <a href="/front_page.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Home</p>
+        </div></a>
+        <a href="iphonepage.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Mobile</p>
+        </div></a>
+        <a href="shoes.html" style="text-decoration: none; color: white;"><div class="electronics p13  border" style="padding: 3px;">
+            <p>Shoes</p>
+        </div></a>
+        <a href="FashionWomen.html" style="text-decoration: none; color: white;"><div class="Fashion p13 border" style="padding: 3px;">
+            <p>Womens-Fashion</p>
+        </div></a>
+        <a href="FashionMen.html" style="text-decoration: none; color: white;"><div class="Personal-care p13 border" style="padding: 3px;">
+            <p>Mens-Fashion</p>
+        </div></a>
+    </div>
+    
+    <body>
+        <div class="profile-page">
+            <aside class="sidebar">
+                <div >
+                    <label for="imageLightbox">
+                        <img src="profilepic.png" alt="User Avatar"   style="height: 100px; width: 100px;">
+                    </label>
+                </div>
+                </nav>
+                <div class="profile-info">
+                    <h1>Mr. Anonymous</h1>
+                    <p>Email: User@gmail.com</p>
+                    <p> &emsp14;</p>
+                    <p>Mobile: 87******65</p>
+                    <p></p>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn btn-primary">Edit Profile</button>
+                    <button class="btn btn-primary">Change Password</button>
+                </div>
+            </section>
+            </aside>
+    
+            <main class="profile-content">
+                <section class="profile-overview">
+                    <input type="checkbox" id="imageLightbox" class="image-checkbox" />
+    
+                    
+    
+                    
+    
+                    
+    
+                <section class="profile-sections">
+                    <div class="section-card">
+                        <h2>Shipping Address</h2>
+                        <p>Chitkara University,Patiala,Punjab</p>
+                        <button class="btn btn-edit">Edit Address</button>
+                    </div>
+                    <br>
+                    <div class="section-card">
+                        <h2>Payments </h2>
+                        <p>Gift Cards</p>
+                        <p>Manage UPI</p>
+                        <button class="btn btn-edit">Edit Payments</button>
+                    </div>
+                    
+                    <a href="login2.html"><button style="margin-top: 59px; height: 30px; width: 70px; background-color: red;">Log Out</button></a>
+            </main>
+        </div>
+    </body>
+    
+    </html>
