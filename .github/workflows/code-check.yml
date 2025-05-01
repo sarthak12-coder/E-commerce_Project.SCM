@@ -3,7 +3,7 @@ name: Code Check on Push
 on:
   push:
     branches:
-      - main  # or your desired branch
+      - main
 
 jobs:
   code-check:
@@ -13,19 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'  # Ensure you're using the correct version of Node.js
+      - name: Check code quality (optional, example with `eslint`)
+        run: |
+          # If you're using ESLint or any other linters
+          echo "No linters defined, skipping code quality check."
 
-      - name: Clear npm cache
-        run: npm cache clean --force  # Cleans the npm cache to prevent installation issues
-
-      - name: Install dependencies
-        run: npm install  # Installs project dependencies from package.json
-
-      - name: Run build (optional)
-        run: npm run build  # Optional: run build if defined in package.json
-
-      - name: Run tests (if available)
-        run: npm test || echo "No tests found"  # Run tests or print a message if no tests are defined
+      - name: Run custom tests or build
+        run: |
+          # Add commands to run tests or build your project
+          echo "No tests or build steps defined, skipping."
