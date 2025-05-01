@@ -3,7 +3,7 @@ name: Code Check on Push
 on:
   push:
     branches:
-      - main  # or whatever branch you want to monitor
+      - main  # or your desired branch
 
 jobs:
   code-check:
@@ -16,13 +16,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18'  # Ensure you're using the correct version of Node.js
+
+      - name: Clear npm cache
+        run: npm cache clean --force  # Cleans the npm cache to prevent installation issues
 
       - name: Install dependencies
-        run: npm install
+        run: npm install  # Installs project dependencies from package.json
 
       - name: Run build (optional)
-        run: npm run build
+        run: npm run build  # Optional: run build if defined in package.json
 
       - name: Run tests (if available)
-        run: npm test || echo "No tests found"
+        run: npm test || echo "No tests found"  # Run tests or print a message if no tests are defined
