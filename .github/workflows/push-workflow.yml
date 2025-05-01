@@ -1,0 +1,16 @@
+name: Push Workflow
+
+on:
+  push:
+    branches:
+      - main  # Change this to your target branch if needed
+
+jobs:
+  run-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo "✅ Code was pushed to the main branch!"
