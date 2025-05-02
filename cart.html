@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mart.in</title>
+    <link rel="stylesheet" href="front_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="navbar" >
+        <div class="nav-logo border">
+            <a href="front_page.html"><div class="logo"></div>  </a>
+        </div>
+        <div class="border p1">
+        <div class="nav-address ">
+            <p style="font-size: 12px; text-align: center;"> Deliver to</p>
+            <div class="address-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <select name="city" id="city">
+                    <option>Rajpura</option>
+                    <option >Delhi</option>
+                    <option >Kurukshetra</option>
+                    <option>Bhiwani</option>
+                </select>
+            </div>
+        </div>
+    
+        </div>
+        <div >
+            
+        </div>
+        <div class="nav-search border" >
+            <div>
+                <select class="select" onchange="redirectToPage(this)">
+                    <option value="#">All Categories</option>
+                    <option value="shoes.html">Men</option>
+                    <option value="FashionWomen.html">Women</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Search E-MART" style="border:none; height:29px; width: 430px;">
+            </div>
+            <div class="search-icon">
+                <button onclick="myFunction()" class="p2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            // Function to redirect based on dropdown selection
+            function redirectToPage(selectElement) {
+                var selectedValue = selectElement.value;
+                if (selectedValue !== "#") {
+                    // Redirect to the selected page
+                    window.location.href = selectedValue;
+                }
+            }
+        </script>
+        
+        
+        <img src="logistics.png" style="height: 35px; width: 35px; margin-top: 14px; margin-left: 14px; " id="">
+        
+        <div class="cart border" style="height: 40px; margin-top: 5px;">
+        
+            <a href="/cart.html" style="text-decoration: none; color: white;"><h3 class="tokri">🛒</h3></a>
+        </div> 
+        <div class="log border" style="padding: 5px; margin-top: 3px;">
+            <a href="signup.html" style="text-decoration: none; color: aliceblue;"><i class="fa-regular fa-user" style="padding-left: 10px; margin-top: 5px;"></i>
+                <h4>User</h4></a>
+        </div>
+        
+    </div>
+    <div class="items-sec ">
+        <a href="/front_page.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Home</p>
+        </div></a>
+        <a href="iphonepage.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Mobile</p>
+        </div></a>
+        <a href="shoes.html" style="text-decoration: none; color: white;"><div class="electronics p13  border" style="padding: 3px;">
+            <p>Shoes</p>
+        </div></a>
+        <a href="FashionWomen.html" style="text-decoration: none; color: white;"><div class="Fashion p13 border" style="padding: 3px;">
+            <p>Womens-Fashion</p>
+        </div></a>
+        <a href="FashionMen.html" style="text-decoration: none; color: white;"><div class="Personal-care p13 border" style="padding: 3px;">
+            <p>Mens-Fashion</p>
+        </div></a>
+    </div>
+
+<div class="cart" style="height: 500px;">
+    <div class="main" style="color: black;" >
+        <pre >No item found in Cart</pre>
+    </div>
+</div>
+
+<div class="backtotop">
+    <div ><a href="front_page.html" style="text-decoration: none; color: aliceblue;">Back to top</a></div>
+</div>
+    
+    
+<footer class="footer" >
+    <div class="footer-container" >
+        <div class="footer-section" >
+            <h3 >GET IN TOUCH</h3>
+            <p >WhatsApp: <a href="tel:+919606081463">+91 8168969113</a></p>
+            <p>Support: <a href="mailto:hello@wearcomet.com">hello@E-Mart.com</a></p>
+            <p>Marketing & Partnership: <a href="mailto:partnerships@wearcomet.com">partnerships@wearcomet.com</a></p>
+            <hr style="color: bisque; height: -1px;">
+            
+            <p>Careers: <a href="#">Apply Here</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>REACH US</h3>
+            <p>58, 60 Feet Rd, KHB Colony, 6th Block, Koramangala, Bengaluru, Karnataka 560095</p>
+        </div>
+        <div class="footer-section">
+            <h3>SOCIAL</h3>
+            <div class="social-icons">
+                <a href=""><img src="/images/linkdin.jpg" alt="Instagram"> <p style="position: relative; bottom: 33px; left: 30px; ">Instagram</p></a>
+                <a href="#" style="position: relative;  bottom: 38px;"><img src="/images/insta.jpg" alt="LinkedIn"><p style="position: relative; bottom: 33px; left: 30px; ">linkedin</p> </a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>ABOUT US</h3>
+            <p><a href="">About Us</a></p>
+            <p><a href="#">Craftsmanship</a></p>
+            <p><a href="#">Vault</a></p>
+            <p><a href="#">Garage</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>QUICK LINKS</h3>
+            <p><a href="front_page.html">Home</a></p>
+            <p><a href="#">Return and Exchange Portal</a></p>
+            <p><a href="/contact.html">Contact Us</a></p>
+            <p><a href="#">Care</a></p>
+            <p><a href="#">FAQ</a></p>
+            <p><a href="#">T&C</a></p>
+            <p><a href="#">Return</a></p>
+
+        </div>
+</div>
+</div>
+</body>
+</html>
