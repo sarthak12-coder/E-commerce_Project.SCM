@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mart-Shoes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="front_page.css">
+    <script src="shoes.js"></script>
+
+</head>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en', includedLanguages: 'en,es,fr,de,it,hi,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+            'google_translate_element'
+        );
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<div id="google_translate_element"></div>
+<style>
+    *{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+
+
+.border{
+    border: 2px solid transparent ;
+}
+
+.border:hover{
+    border: 2px solid white;
+}
+.fa{
+    margin-top: 20px;
+    margin-left: 32px;
+    color: #eee;
+}
+
+
+
+
+.p1{
+    height: 45px;
+    position: relative;
+    top: 7px;
+    width: 95px;
+    margin-left: 52px;
+}
+.select{
+    height: 32px;
+    width: 111px;
+    font-size: 13px;
+   border-top-left-radius:5px ;
+   border-bottom-left-radius: 5px;
+}
+
+
+.p2{
+    height: 33px;
+    position:relative;
+    width: 35px;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius:5px ;
+    background-color: orange;
+
+
+.p2:hover{
+    background-color: rgb(183, 120, 4);
+    cursor: pointer;
+}
+
+.log{
+    color: white;
+    position: relative;
+    top: 8px;
+    height: 30px;
+    padding: 5px;
+    margin-left: 45px;
+    
+}
+
+.lang{
+    background-color: black;
+    color: white;
+    position:relative;
+    top: 17px;
+    margin-left: 45px;
+}
+
+.items-sec{
+    display: flex;
+    background-color:#19134d ;
+    color: aliceblue;
+    font-size: 15px;
+    padding: 4px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.section-title {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.product1 {
+    text-decoration: none;
+    color: black;
+}
+
+.product-list img {
+    width: 170px;
+    height: 100px;
+}
+
+.product-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.product-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    height: 270x;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 225px;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.product-card .price-cart
+{
+    position: relative;
+    bottom: 0px;
+    margin-top: 20% ;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1px;
+
+}
+
+.add-to-cart {
+    background: #333;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 19px;
+}
+
+.add-to-cart:hover {
+    background: #f4a261;
+}
+video{
+    object-fit: fill;
+    
+}
+</style>
+<body>
+    <div class="navbar" >
+        <div class="nav-logo border">
+            <a href="front_page.html"><div class="logo"></div>  </a>
+        </div>
+        <div class="border p1">
+        <div class="nav-address ">
+            <p style="font-size: 12px; text-align: center;"> Deliver to</p>
+            <div class="address-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <select name="city" id="city">
+                    <option>Rajpura</option>
+                    <option >Delhi</option>
+                    <option >Kurukshetra</option>
+                    <option>Bhiwani</option>
+                </select>
+            </div>
+        </div>
+    
+        </div>
+        <div >
+            
+        </div>
+        <div class="nav-search border" >
+            <div>
+                <select class="select" onchange="redirectToPage(this)">
+                    <option value="#">All Categories</option>
+                    <option value="shoes.html">Men</option>
+                    <option value="FashionWomen.html">Women</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" placeholder="Search E-MART" style="border:none; height:29px; width: 430px;" id="SearchBox">
+            </div>
+            <div class="search-icon">
+                <button onclick="myFunction()" class="p2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            // Function to redirect based on dropdown selection
+            function redirectToPage(selectElement) {
+                var selectedValue = selectElement.value;
+                if (selectedValue !== "#") {
+                    // Redirect to the selected page
+                    window.location.href = selectedValue;
+                }
+            }
+        </script>
+        
+        
+        <img src="logistics.png" style="height: 35px; width: 35px; margin-top: 14px; margin-left: 14px; " id="">
+        
+        <div class="cart border" style="height: 40px; margin-top: 5px;">
+        
+            <a href="/cart.html" style="text-decoration: none; color: white;"><h3 class="tokri">🛒</h3></a>
+        </div> 
+        <div class="log border" style="padding: 5px; margin-top: 3px;">
+            <a href="profile.html" style="text-decoration: none; color: aliceblue;"><i class="fa-regular fa-user" style="padding-left: 10px; margin-top: 5px;"></i>
+                <h4>User</h4></a>
+        </div>
+        
+    </div>
+    <div class="items-sec ">
+        <a href="/front_page.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Home</p>
+        </div></a>
+        <a href="iphonepage.html" style="text-decoration: none; color: white;"><div class="mobile p13 border" style="padding: 3px;">
+            <p>Mobile</p>
+        </div></a>
+        <a href="shoes.html" style="text-decoration: none; color: white;"><div class="electronics p13  border" style="padding: 3px;">
+            <p>Shoes</p>
+        </div></a>
+        <a href="FashionWomen.html" style="text-decoration: none; color: white;"><div class="Fashion p13 border" style="padding: 3px;">
+            <p>Womens-Fashion</p>
+        </div></a>
+        <a href="FashionMen.html" style="text-decoration: none; color: white;"><div class="Personal-care p13 border" style="padding: 3px;">
+            <p>Mens-Fashion</p>
+        </div></a>
+    </div>
+
+
+    <video width="100%" height="800"  autoplay muted loop >
+        <source src="shoevid.mp4" type="video/mp4">
+    </video>
+
+
+
+
+    <section id="items" class="product-section">
+        <div class="product-list">
+
+                    <div class="product-card" name="nike dunk High">
+                        <img src="images/shoe1.png" alt="Nike Dunks High">
+                        <h3>Air Jordan 1 Low SE</h3>
+                        <h6>Men Shoes</h6>
+                        <div class="price-cart">
+                            <p class="price">₹11,495</p>
+                            <br>
+                            <div class="add-to-cart-container">
+                                <div>
+                                    <button class="quantity-btn" onclick="decrement('quantity1')">-</button>
+                                    <input type="text" id="quantity1" class="quantity" value="0" readonly style="width: 14px;">
+                                    <button class="quantity-btn" onclick="increment('quantity1')">+</button>
+                                </div>
+                                <div style="position: relative; bottom: 10px;">
+                                    <button onclick="addToCart('quantity1')" class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Product 2 -->
+                    <div class="product-card" name="Nike air force 1">
+                        <img src="images/shoe2.png" alt="Nike Air Force 1 '07">
+                        <h3>Nike Air Force 1 '07</h3>
+                        <h6>Men Shoes</h6>
+                        <div class="price-cart">
+                            <p class="price">₹7,495</p>
+                            <br>
+                            <div class="add-to-cart-container">
+                                <div>
+                                    <button class="quantity-btn" onclick="decrement('quantity2')">-</button>
+                                    <input type="text" id="quantity2" class="quantity" value="0" readonly style="width: 14px;">
+                                    <button class="quantity-btn" onclick="increment('quantity2')">+</button>
+                                </div>
+                                <div style="position: relative; bottom: 10px;">
+                                    <button onclick="addToCart('quantity2')" class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Product 3 -->
+                    <div class="product-card" name="nike air force 1 '07 LV8'">
+                        <img src="images/shoe3.png" alt="Nike Air Force 1 '07 LV8">
+                        <h3>Nike Air Force 1 '07 LV8</h3>
+                        <h6>Men Shoes</h6>
+                        <div class="price-cart">
+                            <p class="price">₹10,795</p>
+                            <br>
+                            <div class="add-to-cart-container">
+                                <div>
+                                    <button class="quantity-btn" onclick="decrement('quantity3')">-</button>
+                                    <input type="text" id="quantity3" class="quantity" value="0" readonly style="width: 14px;">
+                                    <button class="quantity-btn" onclick="increment('quantity3')">+</button>
+                                </div>
+                                <div style="position: relative; bottom: 10px;">
+                                    <button onclick="addToCart('quantity3')" class="add-to-cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            
+            <div class="product-card" name="Nike Air Force 1">
+                <img src="images/shoe4.png" alt="Nike Air Force 1">
+                <h3 id="head3">Nike Air Force 1</h3>
+                <h6>Men Shoes</h6>
+                <div class="price-cart">
+                <p class="price">₹7,495</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity4')">-</button>
+                    <input type="text" id="quantity4" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity4')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity4')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                    </div>
+            </div>
+            <div class="product-card" name="Nike Air Force 1">
+                <img src="images/shoe5.png" alt="Nike Air Force 1">
+                <h3 id="head3">Nike Air Force 1</h3>
+                <h6>Men  Shoes</h6>
+                <div class="price-cart">
+                <p class="price">₹6,995</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity5')">-</button>
+                    <input type="text" id="quantity5" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity5')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity5')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                    </div>
+            </div>
+            <div class="product-card" name="nike air max 90">
+                <img src="images/shoeW1.png" alt="Nike Air Max 90 ">
+                <h3 id="head3">Nike Air Max 90 </h3>
+                <h6>Women's Shoes</h6>
+                <div class="price-cart">
+                    <br>
+                <p class="price">₹10,449</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity6')">-</button>
+                    <input type="text" id="quantity6" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity6')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity6')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="product-card" name="nike dunk low">
+                <img src="images/shoeW2.png" alt="Nike Dunk Low">
+                <h3 id="head3">Nike Dunk Low</h3>
+                <h6>Women's Shoes</h6>
+                <br>
+                <div class="price-cart">
+                <p class="price">₹10,257</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity7')">-</button>
+                    <input type="text" id="quantity7" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity7')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity7')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                    </div>
+            </div>
+            <div class="product-card" name="nike air force 1 Shadow">
+                <img src="images/shoeW3.png" alt="Nike Air Force 1 Shadow">
+                <h3 id="head3">Nike Air Force 1 Shadow</h3>
+                <h6>Women's Shoes</h6>
+                <div class="price-cart">
+                <p class="price">₹11,295</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity8')">-</button>
+                    <input type="text" id="quantity8" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity8')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity8')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                    </div>
+            </div>
+            <div class="product-card" name="Nike Blazer Low '77 Jumbo">
+                <img src="images/shoeW4.png" alt="Nike Blazer Low '77 Jumbo">
+                <h3 id="head3">Nike Blazer Low '77 Jumbo</h3>
+                <h6>Women's Shoes</h6>
+                <div class="price-cart">
+                <p class="price">₹8,167</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity9')">-</button>
+                    <input type="text" id="quantity9" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity9')">+</button></div>
+                    <div style="position: relative; bottom: 10px;"><button  onclick="addToCart('quantity9')" class="add-to-cart">Add to Cart</button></div>
+                </div>
+                
+                    </div>
+            </div>
+            <div class="product-card" name="Jordan Stadium 90">
+                <img src="images/shoeW5.png" alt="Jordan Stadium 90">
+                <h3 id="head3">Jordan Stadium 90</h3>
+                <br>
+                <h6>Women's Shoes</h6>
+                <div class="price-cart">
+                <p class="price">₹12,157</p>
+                <br>
+                <div class="add-to-cart-container">
+                    <div><button class="quantity-btn" onclick="decrement('quantity10')">-</button>
+                    <input type="text" id="quantity10" class="quantity" value="0" readonly style="width: 14px;">
+                    <button class="quantity-btn" onclick="increment('quantity10')">+</button></div>
+                    <div style="position: relative; bottom: 10px;">
+                        <button  onclick="addToCart('quantity10')" class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script>
+     const SearchBox = document.getElementById("SearchBox");
+        const itemList = document.getElementById("items");
+        const items = itemList.getElementsByClassName("product-card");
+
+        SearchBox.addEventListener("input", () => {
+            const filter = SearchBox.value.toLowerCase();
+            let matchingItems = [];
+            let nonMatchingItems = [];
+
+            for (const item of items) {
+                const productName = item.getAttribute('name').toLowerCase();
+     
+                if (productName.includes(filter)) {
+                    matchingItems.push(item);  
+                    item.style.display = "";  
+                } else {
+                    nonMatchingItems.push(item);  
+                    item.style.display = "none";  
+                }
+            }
+
+            matchingItems.forEach(item => itemList.appendChild(item));
+
+            nonMatchingItems.forEach(item => itemList.appendChild(item));
+        });
+
+
+        function increment(quantityId) {
+            var quantityInput = document.getElementById(quantityId);
+            var currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+        }
+
+        function decrement(quantityId) {
+            var quantityInput = document.getElementById(quantityId);
+            var currentQuantity = parseInt(quantityInput.value);
+            if (currentQuantity > 0) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+
+        function addToCart(quantityId) {
+            var quantityInput = document.getElementById(quantityId);
+            var quantity = parseInt(quantityInput.value);
+
+            if (quantity > 0) {
+                alert("Added " + quantity + " items to cart.");
+            } else {
+                alert("Please select a quantity.");
+            }
+        }
+    </script>
+    <footer class="footer" >
+        <div class="footer-container" >
+            <div class="footer-section" >
+                <h3 >GET IN TOUCH</h3>
+                <p >WhatsApp: <a href="tel:+919606081463">+91 8168969113</a></p>
+                <p>Support: <a href="mailto:hello@wearcomet.com">hello@E-Mart.com</a></p>
+                <p>Marketing & Partnership: <a href="mailto:partnerships@wearcomet.com">partnerships@wearcomet.com</a></p>
+                <hr style="color: bisque; height: -1px;">
+                
+                <p>Careers: <a href="#">Apply Here</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>REACH US</h3>
+                <p>58, 60 Feet Rd, KHB Colony, 6th Block, Koramangala, Bengaluru, Karnataka 560095</p>
+            </div>
+            <div class="footer-section">
+                <h3>SOCIAL</h3>
+                <div class="social-icons">
+                    <a href=""><img src="/images/linkdin.jpg" alt="Instagram"> <p style="position: relative; bottom: 33px; left: 30px; ">Instagram</p></a>
+                    <a href="#" style="position: relative;  bottom: 38px;"><img src="/images/insta.jpg" alt="LinkedIn"><p style="position: relative; bottom: 33px; left: 30px; ">linkedin</p> </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>ABOUT US</h3>
+                <p><a href="">About Us</a></p>
+                <p><a href="#">Craftsmanship</a></p>
+                <p><a href="#">Vault</a></p>
+                <p><a href="#">Garage</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <p><a href="front_page.html">Home</a></p>
+                <p><a href="#">Return and Exchange Portal</a></p>
+                <p><a href="/contact.html">Contact Us</a></p>
+                <p><a href="#">Care</a></p>
+                <p><a href="#">FAQ</a></p>
+                <p><a href="#">T&C</a></p>
+                <p><a href="#">Return</a></p>
+    
+            </div>
+    </div>
+</body>
+</html>
